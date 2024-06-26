@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import { MovieGenre as Genre } from '../../types/app';
 import { API_URL } from '@env';
-import { options } from '../../helpers/options';
+import { getOptions } from '../../helpers/options';
 
 function MovieGenre({
   currentGenre,
@@ -16,10 +16,9 @@ function MovieGenre({
   const getGenres = async () => {
     const url = `${API_URL}/genre/movie/list?language=en-US`;
     try {
-      const response = await fetch(url, options());
+      const response = await fetch(url, getOptions());
       const data = await response.json();
       setGenres(data.genres);
-      console.log(data.genres.length);
     } catch {
       console.log('Error');
     }

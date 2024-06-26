@@ -1,6 +1,6 @@
 import { API_ACCESS_TOKEN } from '@env';
 
-export const options = (
+export const getOptions = (
   method: 'GET' | 'POST' = 'GET',
   accept: string = 'application/json',
 ) => {

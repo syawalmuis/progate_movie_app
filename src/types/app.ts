@@ -6,7 +6,6 @@ export interface MovieListProps {
 
 export interface Movie {
   backdrop_path: string;
-  genres: { id: number; name: string };
   homepage: string;
   id: number;
   original_title: string;
@@ -19,7 +18,7 @@ export interface Movie {
     logo_path: string;
     name: string;
     origin_country: string;
-  };
+  }[];
   production_countries: {
     iso_3166_1: string;
     name: string;
@@ -38,6 +37,13 @@ export interface Movie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  genres: MovieGenre[];
+  belongs_to_collection: {
+    id: number;
+    name: string;
+    poster_path: string;
+    backdrop_path: string;
+  };
 }
 
 export interface MovieItemProps {

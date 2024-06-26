@@ -46,7 +46,6 @@ const MovieList = ({
       .then(async (response) => await response.json())
       .then((response) => {
         setMovies(response.results);
-        console.log(response.results);
       })
       .catch((errorResponse) => {
         console.log(errorResponse);
@@ -92,6 +91,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  title: {
+    fontSize: 20,
+    fontWeight: '900',
+  },
   purpleLabel: {
     width: 20,
     height: 40,
@@ -99,10 +102,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#8978A4',
     marginRight: 12,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: '900',
-  },
+
   movieList: {
     paddingLeft: 4,
     marginTop: 8,
