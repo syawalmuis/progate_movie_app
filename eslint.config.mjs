@@ -14,8 +14,8 @@ export default [
       },
     },
     rules: {
-      'react/jsx-uses-react': 'error',
-      'react/jsx-uses-vars': 'error',
+      'react/jsx-uses-react': 'off',
+      'react/jsx-uses-vars': 'off',
     },
   },
   { languageOptions: { globals: globals.browser } },
